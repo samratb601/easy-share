@@ -12,6 +12,12 @@ EasyShare is a lightweight file-sharing application that provides a secure and t
 
 - **Versatile Compatibility:** Access shared files from anywhere, on any device with an internet connection.
 
+## Technology Stack
+
+- **Frontend:** [Next.js](https://nextjs.org/) v13 - A React framework for building server-rendered and statically generated web applications.
+
+- **Database:** [MongoDB](https://www.mongodb.com/) - A NoSQL database for storing file metadata.
+
 ## How to Use
 
 1. **Upload:** Select and upload your file of choice.
