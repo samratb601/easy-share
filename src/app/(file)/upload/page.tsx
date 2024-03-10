@@ -3,6 +3,7 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { ChangeEvent, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function Page() {
   const [file, setFile] = useState<File>();
@@ -75,8 +76,8 @@ export default function Page() {
                     alt=""
                     className="mx-auto w-[50px]"
                   />
-                  <p className="text-center font-semibold text-gray-700 tracking-wide">
-                    {file ? file.name : "Upload files"}
+                  <p className="text-center font-semibold text-gray-600 tracking-wide">
+                    {file ? file.name : "Select & Upload files"}
                   </p>
                 </label>
               )}
@@ -85,15 +86,11 @@ export default function Page() {
 
           <button
             type="button"
-            className={`relative overflow-hidden p-0 h-[35px] mt-10 w-full block 
-            ${
-              isFileUploading
-                ? "border-2 border-blue-600"
-                : "bg-blue-600 disabled:bg-blue-500"
-            } 
-            my-3 text-slate-50 rounded-full hover:shadow transition delay-50 duration-50 hover:translate-y-[0.5px] tracking-wider font-semibold text-sm`}
+            className={twMerge(`relative overflow-hidden p-0 h-[35px] mt-10 w-full block my-3 text-slate-50 rounded-full hover:shadow transition delay-50 duration-50 hover:translate-y-[0.5px] tracking-wider font-semibold text-sm bg-blue-600 disabled:bg-blue-400` , ` ${
+              isFileUploading  ? "bg-white border-2 border-blue-600" : ""
+            }`)}
             onClick={upload}
-            disabled={isFileUploading || percentage > 0}
+            disabled={!file || isFileUploading || percentage > 0}
           >
             {isFileUploading ? (
               <div
