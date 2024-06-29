@@ -16,7 +16,7 @@ EasyShare is a lightweight file-sharing application that provides a secure and t
 
 - **Frontend:** [Next.js](https://nextjs.org/) v13 - A React framework for building server-rendered and statically generated web applications.
 
-- **Backend:** [Next.js](https://nextjs.org/) v13 -  Used in conjunction with its API routes to handle server-side logic and build server-rendered applications.
+- **Backend:** [Next.js](https://nextjs.org/) v13 -  Used in conjunction with its API routes to handle server-side logic.
 
 - **Database:** [MongoDB](https://www.mongodb.com/) - A NoSQL database for storing file metadata.
 
