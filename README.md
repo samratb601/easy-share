@@ -33,6 +33,6 @@ To get started with EasyShare, follow these steps:
    ```bash
    git clone https://github.com/samratb601/easy-share.git
 
-2. Navigate to the project directory: `cd ephemeral-share`
+2. Navigate to the project directory: `cd easy-share`
 
 3. Run the application: `npm install` then `npm run dev`
